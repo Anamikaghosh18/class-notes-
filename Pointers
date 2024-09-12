@@ -1,0 +1,50 @@
+// program of void pointer/ generic pointer --- example
+// this can store address of any data type
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int x = 20;
+    char ch = 'A';
+    float fl = 8.907;
+    double d= 7.56;
+    void *gp;
+    gp = &x;
+    cout << *(int*)gp << endl;
+    gp = &ch ;
+    cout << *(char*)gp << endl;
+    gp = &fl;
+    cout << *(float*)gp << endl;
+    gp = &d;
+    cout << *(double*)gp << endl;
+    return 0;
+}
+=================================================================================================================================================
+
+// constant pointer
+#include<iostream>
+using namespace std;
+int main(){
+    int n1 = 1 , n2 = 10;
+    int *const p = &n1;
+    *p = 100; // this will be valid 
+    p = &n2; // this will not be valid bcz the address cant be modified 
+    cout << *p;
+     return 0;
+}
+
+=====================================================================================================================================================
+
+// pointer to constant 
+#include<iostream>
+using namespace std;
+int main(){
+    int n1 = 1 , n2 = 10;
+    const int *p = &n2;
+   // *p = 100; // this will be invalid 
+    p = &n2; // this will not be valid bcz the address cant be modified 
+    cout << *p;
+     return 0;
+}
+
+========================================================================================================================================================
+
