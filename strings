@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+   /* string str = "this is a c++ programming";
+    string str1 = "welcome";
+    string str2 = "welldone";
+    int x = str1.compare(str2);
+    cout << "bytes " << sizeof(str) << endl;
+    cout << "size " << str.size() << endl;
+    cout << "length:  " << str.length() << endl;
+    cout << "max size: "  << str.max_size() << endl;
+    cout << "empty " << (str.empty() ? "yes" : "no") << endl;
+    if(x == 0){
+        cout << "same" << endl;
+    }else{
+        cout << "not saME" << endl;
+    }
+    */
+    /*
+    string str1 ("green apple");
+    string str2 ("red apple");
+    if(str1.compare(str2)!= 0){
+        cout << str1 << "is not" << str2 << endl;
+    }
+    if(str1.compare(6,5,"apple") == 0){
+        cout << str1 << "is an apple" << endl;
+    }
+    if(str1.compare(6,5,str2,4,5) == 0){
+        cout << "both are apple";
+    }*/
+    string s1 = "welcome";
+    string s2 = "wearsome";
+    cout << s1.find("lc") << endl;
+    cout << s2.find("ea") << endl;
+    cout << s2.find_last_of('e');
+    
+}
+
