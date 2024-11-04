@@ -72,3 +72,7 @@ int main() {
     ((dc*)bptr)->show();
     return 0;
 }
+=========================================================================================================
+                            virtual function 
+-> vitual destructer is used when we delete the pointer obj of base class the destructor of child class not called to solve this . 
+-> 
