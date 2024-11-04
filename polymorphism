@@ -76,3 +76,38 @@ int main() {
                             virtual function 
 -> vitual destructer is used when we delete the pointer obj of base class the destructor of child class not called to solve this . 
 -> 
+
+
+// wap to create a base class student having show function as virtual , show 1 as normal member func , create a child class  function from a base class having its own normal member function getdata now in the main function create normal object of both class pointer object object of base class only but base class pointer object shiuld point towards its own and derived class normal object and using that pointer object of a base calss call its own and derived class commen   
+
+#include <iostream>
+using namespace std;
+class student{
+    public:
+    virtual void show(){
+        cout << "show() of base class\n";
+    }
+    void show1(){
+        cout << "show1 of base calss\n";
+    }
+};
+class student1: public student{
+    public:
+    void getdata(){
+       cout << "put data in student 1\n";
+    }
+};
+int main() {
+    student st;
+    student1 st1;
+    student *stu;
+    stu = &st;
+    stu = &st1;
+    cout << "-- runtime binding--\n";
+    cout << "stu points to student base class\n";
+    stu->show();
+    stu->show1();
+    ((student1*)stu)->getdata();
+    
+    return 0;
+}
