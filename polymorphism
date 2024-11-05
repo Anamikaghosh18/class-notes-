@@ -111,3 +111,61 @@ int main() {
     
     return 0;
 }
+========================================================
+pure virtual function 
+
+
+// wap to create abstract class having one pure virtaul function namesd as getmarks one normal member function named as stdent info and inside the body of the function ask the user to enter roll no and name.
+// create a derived class and define the body of getmarks function inside the derived class by asking the user to enter the amrlks of five subjects . craete a one normal function of the derived class named as calculate in which diaplay the total and percentage and the name and the roll no of the student . 
+#include <iostream>
+using namespace std;
+class marks{
+    public:
+    string name;
+    int roll;
+    virtual void getmarks() = 0;
+    void studentinfo(){
+        cout << "Name = ";
+        cin >> name;
+        cout << "\nroll= " ;
+        cin >> roll;
+    }
+};
+class student : public marks{
+    public:
+    int m1,m2,m3,m4,m5;
+    void getmarks(){
+        cout << "\nenter marks of subjects: ";
+        cout << "\nsub1 = ";
+        cin >> m1;
+        cout << "\nsub2 = ";
+        cin >> m2;
+        cout << "\nsub3 = ";
+        cin >> m3;
+        cout << "\nsub4 = ";
+        cin >> m4;
+        cout << "\nsub5 = ";
+        cin >> m5;
+    }
+    void calculate(){
+        int sum ;
+        sum = m1+m2+m3+m4+m5;
+        double percentage;
+        percentage = (sum*100)/500;
+        cout << "\nstudent report: " << endl;
+        cout << "name : " << name << endl;
+        cout << "roll : " << roll << endl;
+        cout << "marks of subjects: " << m1 << " "<< m2<<" " << m3 << " "<< m4<< " " << m5 << endl;
+        cout << "percentage: "  << percentage;
+        
+    }
+};
+int main(){
+    marks *ptr;
+    student obj;
+    ptr = &obj;
+    ptr->studentinfo();
+    obj.getmarks();
+    obj.calculate();
+    return 0;
+}
